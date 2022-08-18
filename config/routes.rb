@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'test/index'
+  get 'test/new'
+  
+
+  resources :choices
+  resources :questions
+  resources :users
+
   root 'home#index'
   get 'home/index'
   

@@ -1,11 +1,13 @@
 <div class="col-md-10 offset-md-1"> 
     <div class="jumbotron">
-
+        <h1>HOME PAGE</h1>
         <h1 class="display-10">Hello User !</h1>
         <h3> Are you an extrovert, introvert or ambivert? </h3>
         <p class="lead">Knowing your traits will help you figure out how you can best fit and function in the workplace and the world.</p>
         <hr class="my-4">
-        
+
+        <%= link_to 'Add User' , new_user_path, class:"btn btn-primary" %>
+        <%= link_to 'Test Your Personality' , test_index_path, class:"btn btn-primary" %>
         
     </div>
 </div>

@@ -1,0 +1,16 @@
+<table cellpadding="0">
+    <tbody>
+        <% @questions.each do |question| %>
+            <tr> 
+                <td> <%= question.body %> 
+                    </br><br>  
+                    <% question.choices.each do |ch| %>
+                        <ul>
+                            <input Type="checkbox" name="ch.choice_body"> <%= ch.choice_body %></input>  <%= ch.choice_score %>
+                        </ul>
+                    <% end %>
+                </td>
+            </tr>   
+        <% end %>
+    </tbody>
+</table>
