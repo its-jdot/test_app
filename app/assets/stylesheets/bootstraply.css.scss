@@ -1,13 +1,13 @@
 @import 'bootstrap/dist/css/bootstrap';
 
-table {
-    counter-reset: rowNumber;
-  }
+// table {
+//     counter-reset: rowNumber;
+//   }
   
-  table tr::before {
-    display: table-cell;
-    counter-increment: rowNumber;
-    content: "Q"counter(rowNumber) ".";
-    padding-right: 0.3em;
-    text-align: right;
-  }
+//   table tr::before {
+//     display: table-cell;
+//     counter-increment: rowNumber;
+//     content: "Q"counter(rowNumber) ".";
+//     padding-right: 0.3em;
+//     text-align: right;
+//   }
