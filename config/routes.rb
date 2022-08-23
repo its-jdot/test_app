@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'test/index'
   get 'test/new'
   
+  get 'question/assign_score'
 
   resources :choices
   resources :questions

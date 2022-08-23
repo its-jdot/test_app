@@ -1,10 +1,10 @@
 
 <table cellpadding="0">
-    <tbody>
+    <tbody> 
         <% @questions.each do |question| %>
             <tr>
                 <div> 
-                <td> <div class='card-header'> <%= question.body %> </div>  
+                <td> <div class='card-header'> <%= question.body %>  </div>  
                     </br><br>  
                     <% question.choices.each do |ch| %>
                         <ul class="list-group list-group-flush">
