@@ -8,12 +8,15 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1 or /questions/1.json
   def show
+    
   end
 
   # GET /questions/new
   def new
     @question = Question.new
   end
+
+  
 
   # GET /questions/1/edit
   def edit
@@ -57,6 +60,8 @@ class QuestionsController < ApplicationController
     end
   end
 
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
@@ -67,4 +72,6 @@ class QuestionsController < ApplicationController
     def question_params
       params.require(:question).permit(:test_id, :body, :question_score)
     end
+
+    
 end

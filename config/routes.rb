@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'test/index'
-  get 'test/new'
+  get 'tests/index'
+  get 'tests/new'
   
+  get 'question/assign_score'
 
   resources :choices
   resources :questions
+  resources :tests
   resources :users
 
   root 'home#index'

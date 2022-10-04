@@ -52,9 +52,8 @@ user = User.create([
         choice_score: 5
     },
     {
-
         question_id: questions.first.id,
-
+        
         choice_body: "Focused",
         choice_score: 2
     },
