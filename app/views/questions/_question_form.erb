@@ -1,0 +1,19 @@
+
+<table cellpadding="0">
+    <tbody>
+        <% @questions.each do |question| %>
+            <tr>
+                <div> 
+                <td> <div class='card-header'> <%= question.body %> </div>  
+                    </br><br>  
+                    <% question.choices.each do |ch| %>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> <input Type="checkbox" name="ch.choice_body"> <%= ch.choice_body %> </input> </li>     
+                        </ul>
+                    <% end %>
+                </td>
+                </div>
+            </tr>   
+        <% end %>
+    </tbody>
+</table>
