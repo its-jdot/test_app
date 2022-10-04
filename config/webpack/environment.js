@@ -10,6 +10,6 @@ jQuery: 'jquery',
 
 Popper: ['popper.js', 'default']
 
-})
+}))
 
 module.exports = environment

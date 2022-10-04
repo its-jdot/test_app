@@ -1,0 +1,30 @@
+<form action="">
+
+    <table cellpadding="0">
+        <tbody>
+            <% @questions.each do |question| %>
+                <tr>
+                    <div>
+                        <td> <div class="card-header" > <%= question.body %> </div>  
+                            <ul class= "list-group list-group-flush">
+                                <% question.choices.each do |ch| %>
+                                    <li class="list-group-item"  >
+                                        <input Type="radio" required name=<%= question.id %> class="test" value=<%= ch.choice_score %>> <%= ch.choice_body %></input>  (<%= ch.choice_score %>) 
+                                    </li>
+                                <% end %>         
+                            </ul>
+                        </td>
+                    </div>
+                </tr>   
+            <% end %>
+            
+            </tbody>
+            </table> 
+            
+            
+            <input type="Submit" name="submit" class="calScore" id='submit_button'>
+            <input hidden type="button" name="sum" class="totalSum" />
+    <%= javascript_pack_tag 'test_score' %>
+</form>
+
+        

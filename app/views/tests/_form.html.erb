@@ -1,0 +1,49 @@
+<%= form_with(model: @test, local: true) do |f| %>
+    <% if @test.errors.any? %>
+      <div class="error_messages">
+        <h2><%= pluralize(@test.errors.count, "error") %> prohibited this test from being saved:</h2>
+        <ul>
+        <% @test.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+
+    <div class="field">
+      <%= f.label :user_id %>
+      <%= f.text_field :user_id %>
+    </div>
+
+
+    <div class="field">
+      <fieldset>
+  
+        <% @questions.each do |question| %>
+          <ul>
+            <div class="card-header"><strong> Q: <%= question.body %> </strong>  </div>
+            <% question.choices.each do |choice| %>
+              <li class="list-group-item"  >
+                  <input Type="radio" required name=<%= question.id %> class="test" value=<%= choice.choice_score %>> <%= choice.choice_body %></input>  (<%= choice.choice_score %>) 
+              </li>  
+            <% end %>
+          </ul>
+        <% end %>
+            <input type="Submit" name="submit" class="calScore" id='submit_button'>
+            <input hidden type="button" name="test_score" class="test_score" />
+            <%= javascript_pack_tag 'test_score' %>
+      </fieldset>
+    </div>
+
+    
+    <div class="actions">
+      <%= f.submit "Submit Test"%>
+    </div>       
+    
+    
+<% end %>
+
+
+
+
